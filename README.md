@@ -17,7 +17,29 @@ main.py consists of the main code to initiate a tkinter event (dialog box) to up
 
 Libraries used: opencv,numpy,tkinter,PIL,easygui,imageio,matplotlib,os,sys (except easygui other libraries are in-built jupyter notebook)
 
-*Sample images and their output is attached above
+## Installation
+
+Clone the repository:
+
+git clone https://github.com/YOUR_USERNAME/Image_Cartoonification_OpenCV.git
+cd Image_Cartoonification_OpenCV
 
 
 
+## Install required dependencies:
+
+pip install opencv-python numpy matplotlib pillow easygui imageio
+
+## Run the Project
+
+Execute the following command:
+
+python main.py
+
+
+## How to Use
+1. Run the application.
+2. Click on Cartoonify an Image.
+3. Select an image from your system.
+4. The application will display the image transformation process.
+5. The cartoonified image will be automatically saved in the same folder as the original image.
