@@ -1,45 +1,81 @@
 # Image Cartoonification 
-Apply cartoon effect to images using opencv with python
+An interactive image transformation web application built using Python, OpenCV, and Streamlit that converts images into different artistic styles including Cartoon, Pencil Sketch, and Watercolor effects.
 
-Different functions are used to apply cartoon effects and save the image
+# Features
+Upload JPG, JPEG, and PNG images
+Cartoonify images using OpenCV image processing
+Convert images into Pencil Sketch artwork
+Generate Watercolor-style effects
+Side-by-side Original vs Processed image comparison
+Download processed images instantly
+Simple and responsive Streamlit UI
 
-1. upload_save.py : contains functions to upload the image file from a folder and save the cartoonified image to the same folder
-2. image_cartoonification.py : used to apply cartoon effect on the selected images
+# Tech Stack
+Python
+OpenCV
+NumPy
+Pillow (PIL)
+Streamlit
 
-Cartoon effect is applied using the following steps for an image (each image transition is plotted after final output) : 
-1. Read the image using opencv
-2. Convert to gray scale and apply median blur to smoothen the image
-3. Retreive edges using adaptive threshold technique (efficient when detailed edges are required)
-4. Apply bilateral filter to RGB image (this ensures smoothness but edges remain sharp)
-5. Mask both filtered and edged images to obtain cartoon effect
+# Project Structure
+AI_Cartoon_Studio/
+│
+├── app.py
+├── cartoonifier.py
+├── requirements.txt
+├── README.md
+└── outputs/
 
-main.py consists of the main code to initiate a tkinter event (dialog box) to uplaod the image (using easygui) and save the image to the original path
-
-Libraries used: opencv,numpy,tkinter,PIL,easygui,imageio,matplotlib,os,sys (except easygui other libraries are in-built jupyter notebook)
-
-## Installation
-
-Clone the repository:
-
-git clone https://github.com/YOUR_USERNAME/Image_Cartoonification_OpenCV.git
+# Installation
+Clone Repository
+git clone https://github.com/srishtirai0812/Image_Cartoonification_OpenCV.git
 cd Image_Cartoonification_OpenCV
+Create Virtual Environment
+python -m venv venv
+Activate Environment
 
+Windows:
 
+venv\Scripts\activate
+Install Dependencies
+pip install -r requirements.txt
 
-## Install required dependencies:
+# Run Application
+python -m streamlit run app.py
 
-pip install opencv-python numpy matplotlib pillow easygui imageio
+The application will be available at:
 
-## Run the Project
+http://localhost:8501
 
-Execute the following command:
+# Available Effects
 
-python main.py
+1. Cartoon Effect
 
+Uses:
 
-## How to Use
-1. Run the application.
-2. Click on Cartoonify an Image.
-3. Select an image from your system.
-4. The application will display the image transformation process.
-5. The cartoonified image will be automatically saved in the same folder as the original image.
+Grayscale conversion
+Median Blur
+Adaptive Thresholding
+Bilateral Filtering
+Edge Masking
+Pencil Sketch
+
+Creates hand-drawn sketch effects using image inversion and Gaussian blur techniques.
+
+2. Watercolor Effect
+
+Applies OpenCV stylization filters to generate watercolor-like artistic outputs.
+
+# Sample Workflow
+Upload an image
+Select an effect
+View transformed output
+Download the processed image
+
+# Future Enhancements
+Real-time webcam cartoonification
+Batch image processing
+Anime-style filters
+Adjustable effect intensity sliders
+Cloud deployment
+Face-aware cartoonification
